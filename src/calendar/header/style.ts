@@ -16,7 +16,8 @@ export default function (theme: Theme = {}) {
       alignItems: 'center'
     },
     headerContainer: {
-      flexDirection: 'row'
+      flexDirection: 'row',
+      flex:1,
     },
     monthText: {
       fontSize: appStyle.textMonthFontSize,

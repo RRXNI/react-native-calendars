@@ -92,9 +92,10 @@ const PeriodDay = (props: PeriodDayProps) => {
       const start = markingStyle.startingDay;
       const end = markingStyle.endingDay;
       if (start && !end) {
-        containerStyle.push({backgroundColor: markingStyle.startingDay?.backgroundColor});
-      } else if (end && !start || end && start) {
-        containerStyle.push({backgroundColor: markingStyle.endingDay?.backgroundColor});
+        containerStyle.push({ backgroundColor:'#1DB954' });
+      }
+      else if (end && !start || end && start) {
+          containerStyle.push({ backgroundColor:'#1DB954' });
       }
     }
     return containerStyle;
@@ -174,7 +175,7 @@ const PeriodDay = (props: PeriodDayProps) => {
     >
       <View style={style.current.wrapper}>
         {renderFillers()}
-        <View style={containerStyle}>
+        <View style={[containerStyle, {width: 38, height:38, borderRadius:38/2, justifyContent:'center',alignItems:'center',}]}>
           <Text allowFontScaling={false} style={textStyle}>
             {String(children)}
           </Text>

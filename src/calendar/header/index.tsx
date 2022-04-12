@@ -211,7 +211,6 @@ const CalendarHeader = forwardRef((props: CalendarHeaderProps, ref) => {
         onPress={!shouldDisable ? onPress : undefined}
         disabled={shouldDisable}
         style={style.current.arrow}
-        hitSlop={{left: 20, right: 20, top: 20, bottom: 20}}
         testID={testId}
       >
         {renderArrow ? (
@@ -262,11 +261,11 @@ const CalendarHeader = forwardRef((props: CalendarHeaderProps, ref) => {
       importantForAccessibility={importantForAccessibility} // Android
     >
       <View style={style.current.header}>
-        {_renderArrow('left')}
         <View style={style.current.headerContainer}>
           {_renderHeader()}
-          {renderIndicator()}
+          {/* {renderIndicator()} */}
         </View>
+        {_renderArrow('left')}
         {_renderArrow('right')}
       </View>
       {renderDayNames()}
